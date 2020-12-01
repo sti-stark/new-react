@@ -4,13 +4,19 @@
   "main": "index.js",
   "scripts": {
     "serve": "live-server public --port=8081",
-    "dev": "bable src/app.js --out-file=public/js/index.js"
+    "dev": "babel src/app-weather.js --out-file=public/js/index.js --presets=react,env --watch"
   },
-  "author": "",
+  "author": "santi",
   "license": "ISC",
   "keywords": [],
   "description": "",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "babel
+    "babel-preset-react": "^6.24.1",
+    "live-server": "^1.2.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1"
+  }
+}
